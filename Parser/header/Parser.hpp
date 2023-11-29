@@ -8,7 +8,7 @@
 # include <cstdint>
 # include <filesystem>
 
-# define MAX_BOX_SIZE 1048576 // 1MB, max size.
+# define MAX_BOX_SIZE 1048576
 
 struct s_box
 {
