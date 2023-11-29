@@ -9,7 +9,7 @@ As a bonus tasks decode the mdat content into an image file (PNG).
 The project is written in C++ and uses Make as a build system. The project can be built by
 running the following commands:
 - Clone the repository:
-`` git clone ``
+`` git clone git@github.com:recozzi/ParserCodingChallenge-Narwhal2023.git``
 - Move to the project directory:
 `` cd Parser ``
 - Compile the project with Makefile rule:
@@ -27,8 +27,7 @@ The size is stored in a 32-bit unsigned integer, while the type is stored in a s
 The parseBox() function is called in the main() function, it uses a try-catch block to perform and check if the file is a valid MPEG 4 Part 12 ISO Base Media File Format, if the file is empty or the box size is over the maximum size allowed. If one of these conditions is true, the program throws an exception.
 ## Bonus task 1
 
-## References
-For the development of the project, I used some resources to understand the structure of such of file and the method to decode the images inside the MDAT Box. The resources are listed in the References section.
 ## Info
-For more information about the project, please refer to the subject file.
+For more information about the project, please refer to the subject file [here](https://github.com/recozzi/ParserCodingChallenge-Narwhal2023/blob/master/subject/Parser%20Coding%20Challenge%20-%20Narwhal%202023.pdf).
 ## License
+[here](https://github.com/recozzi/ParserCodingChallenge-Narwhal2023/blob/master/LICENSE.md).
