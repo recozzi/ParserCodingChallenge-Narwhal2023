@@ -26,7 +26,23 @@ The size is stored in a 32-bit unsigned integer, while the type is stored in a s
 
 The parseBox() function is called in the main() function, it uses a try-catch block to perform and check if the file is a valid MPEG 4 Part 12 ISO Base Media File Format, if the file is empty or the box size is over the maximum size allowed. If one of these conditions is true, the program throws an exception.
 ## Bonus task 1
+In the context of this project, a "box" is a data structure that contains information about the file in a specific format. For this reason in the project I capped the box size at 1048576 bytes(1MB): if the size is bigger the program just throws an exception. 
+Without this check the dimension of the box could cause several issues:
 
+- **Memory Consumption and Performance**
+- **Data Corruption**
+- **Buffer Overflow** 
+- **Resource Exhaustion**
+- **Security**
+- **Network Transfer Issues**
+
+Processing and manipulating a large box into memory may consume a significant amount of memory, impacting in time and the overall performance. On system with limited memory, this may cause the system to slow down or even crash. If the box size exceeds this limit, the program may not be able to handled correctly, leading to errors or failures in reading.
+
+Buffer overflow occurs when a program tries to store more data in a buffer than it was intended to hold. This may cause the program to crash or unpredictable behavior.
+
+In scenarios where files are transferred over a network, a large box size can result in increased transmission times and limits network bandwidth.
+
+Moreover if the box size is not handled correctly, it may lead to security issues, such as denial of service attacks or remote code execution.
 ## Info
 For more information about the project, please refer to the subject file [here](https://github.com/recozzi/ParserCodingChallenge-Narwhal2023/blob/master/subject/Parser%20Coding%20Challenge%20-%20Narwhal%202023.pdf).
 ## License
