@@ -21,7 +21,6 @@ OBJS 		:=	$(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))
 RED		=	\033[0;91m
 GREEN	=	\033[0;92m
 YELLOW	=	\033[0;93m
-CYAN	=	\033[0;96m
 WHITE	=	\033[0;97m
 
 # ======================================================================== #
@@ -43,8 +42,7 @@ clean:
 	@rm $(NAME)
 	@rm -rf $(OBJS_DIR)
 	@rm -rf ../images
-	@echo "$(RED)All $(CYAN)$(NAME)$(RED)'s objects removed..."
-	@echo "$(RED)...And $(CYAN)${NAME}$(RED) as been removed."
+	@echo "$(RED)All object files removed.$(WHITE)"
 
 re:	fclean all
 
